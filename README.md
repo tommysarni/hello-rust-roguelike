@@ -14,6 +14,6 @@
 
 ### To run in browser
 1. `wasm-pack build --target web`
-2. Then Start [Live Server](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare)
+2. Then Start [Live Server](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare) (Go Live on the bottom tool bar)
 
 

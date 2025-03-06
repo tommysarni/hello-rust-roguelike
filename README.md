@@ -1,6 +1,6 @@
 # Hello Rust Rogue-like
 
-* Following this [tutorial]()
+* Following this [tutorial](https://bfnightly.bracketproductions.com/rustbook/chapter_0.html)
 * Learning Rust through game dev
 
 ### Controls

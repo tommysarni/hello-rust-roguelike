@@ -1,4 +1,7 @@
-use bracket_lib::{color::RGB, prelude::{self as rltk, GameState}};
+use bracket_lib::{
+    color::RGB,
+    prelude::{self as rltk, GameState},
+};
 use specs::prelude::*;
 
 use crate::components::{Player, Position, Renderable};
@@ -6,7 +9,7 @@ use crate::map::*;
 use crate::player::*;
 
 pub struct State {
-   pub ecs: World,
+    pub ecs: World,
 }
 
 impl State {
@@ -41,8 +44,6 @@ impl State {
         self.ecs.maintain();
     }
 }
-
-
 
 impl GameState for State {
     fn tick(&mut self, ctx: &mut rltk::BTerm) {

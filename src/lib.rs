@@ -1,12 +1,12 @@
-use wasm_bindgen::prelude::*;
 use bracket_lib::prelude::*;
+use wasm_bindgen::prelude::*;
 
 // Module declarations
 pub mod components;
+pub mod game_state;
+pub mod map;
 pub mod player;
 pub mod rect;
-pub mod map;
-pub mod game_state;
 
 #[wasm_bindgen(start)]
 pub fn wasm_main() -> Result<(), JsValue> {
@@ -21,8 +21,7 @@ pub fn start() -> Result<(), JsValue> {
         .with_fps_cap(30.0)
         .build()
         .map_err(|e| JsValue::from_str(&e.to_string()))?;
-    
+
     let gs = game_state::State::new();
-    main_loop(context, gs)
-        .map_err(|e| JsValue::from_str(&e.to_string()))
+    main_loop(context, gs).map_err(|e| JsValue::from_str(&e.to_string()))
 }

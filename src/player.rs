@@ -1,7 +1,7 @@
-use crate::game_state::{State, xy_idx};
-use crate::map::TileType;
 use crate::components::{Player, Position};
-use bracket_lib::prelude::{VirtualKeyCode, self as rltk};
+use crate::game_state::{xy_idx, State};
+use crate::map::TileType;
+use bracket_lib::prelude::{self as rltk};
 use specs::prelude::*;
 use std::cmp::{max, min};
 
@@ -28,9 +28,9 @@ pub fn player_input(gs: &mut State, ctx: &mut rltk::BTerm) {
             Right | Key6 | L => (1, 0),
             Up | Key8 | K => (0, -1),
             Down | Key2 | J => (0, 1),
-            _ => (0, 0)
+            _ => (0, 0),
         };
-        
+
         if delta != (0, 0) {
             try_move_player(delta.0, delta.1, &mut gs.ecs);
         }

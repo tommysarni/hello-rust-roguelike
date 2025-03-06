@@ -1,6 +1,9 @@
-use crate::rect::Rect;
 use crate::game_state::xy_idx;
-use bracket_lib::{color::RGB, prelude::{RandomNumberGenerator, self as rltk}};
+use crate::rect::Rect;
+use bracket_lib::{
+    color::RGB,
+    prelude::{self as rltk, RandomNumberGenerator},
+};
 use std::cmp::{max, min};
 
 #[derive(PartialEq, Copy, Clone)]

@@ -1,0 +1,14 @@
+[package]
+name = "hellorust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bracket-lib = { git = "https://github.com/amethyst/bracket-lib.git" }
+console_error_panic_hook = "0.1.7"
+specs = "0.20.0"
+specs-derive = "0.4.1"
+wasm-bindgen = "0.2.100"
+
+[lib]
+crate-type = ["cdylib", "rlib"]

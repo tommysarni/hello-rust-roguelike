@@ -24,10 +24,10 @@ pub fn player_input(gs: &mut State, ctx: &mut rltk::BTerm) {
     if let Some(key) = ctx.key {
         use bracket_lib::prelude::VirtualKeyCode::*;
         let delta = match key {
-            Left | Key4 | H => (-1, 0),
-            Right | Key6 | L => (1, 0),
-            Up | Key8 | K => (0, -1),
-            Down | Key2 | J => (0, 1),
+            Left | Key4 | Numpad4 | H => (-1, 0),
+            Right | Key6 | Numpad6 | L => (1, 0),
+            Up | Key8 | Numpad8 | K => (0, -1),
+            Down | Key2 | Numpad2 | J => (0, 1),
             _ => (0, 0),
         };
 
